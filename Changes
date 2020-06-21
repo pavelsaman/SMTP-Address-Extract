@@ -1,0 +1,6 @@
+Revision history for Perl extension SMTP::Address::Extract.
+
+0.01  Sun Jun 21 11:40:31 2020
+	- original version; created by h2xs 1.23 with options
+		-AXn SMTP::Address::Extract
+

@@ -1,0 +1,6 @@
+Changes
+Makefile.PL
+MANIFEST
+README
+t/SMTP-Address-Extract.t
+lib/SMTP/Address/Extract.pm
