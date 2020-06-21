@@ -6,13 +6,12 @@ use warnings;
 use Readonly;
 
 use Exporter 'import';
-our @EXPORT    = qw();
 our @EXPORT_OK = qw(addresses aliases parse);
 our %EXPORT_TAGS = (
     all  => \@EXPORT_OK,
     ALL  => \@EXPORT_OK,
     test => \@EXPORT_OK,
-    TEST => \@EXPORT_OK
+    TEST => \@EXPORT_OK,
 );
 
 our $VERSION = 0.001;
@@ -51,7 +50,7 @@ Readonly my $ALIAS_FORMAT => qr{
 sub addresses {
     my $str = shift;
 
-    my @addresses = $str =~ m{$SMTP_ADDRESS_FORMAT}g;
+    my @addresses = $str =~ m{$SMTP_ADDRESS_FORMAT}xmsg;
 
     return @addresses;
 }
@@ -59,7 +58,7 @@ sub addresses {
 sub aliases {
     my $str = shift;
 
-    my @aliases = $str =~ m{$ALIAS_FORMAT}g;
+    my @aliases = $str =~ m{$ALIAS_FORMAT}xmsg;
 
     return @aliases;
 }
